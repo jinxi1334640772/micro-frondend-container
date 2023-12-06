@@ -1,6 +1,7 @@
 {
-  "miniprogramRoot": "./",
+  "miniprogramRoot": "dist/tt/",
   "projectname": "taro-project",
+  "description": "taro项目，这是字节跳动小程序项目配置的默认文件",
   "appid": "testAppId",
   "setting": {
     "es6": false,

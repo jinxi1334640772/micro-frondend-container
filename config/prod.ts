@@ -1,6 +1,11 @@
 import type { UserConfigExport } from "@tarojs/cli";
 
 export default {
+  env: {
+    baseUrl: JSON.stringify('http://rap2api.taobao.org//app/mock/315295'), 
+    apiPath: JSON.stringify('/app/mock/315295'), 
+    api: JSON.stringify('/example/list'), 
+  },
   mini: {},
   h5: {
     /**

@@ -1,7 +1,7 @@
 {
-  "miniprogramRoot": "dist/",
+  "miniprogramRoot": "dist/weapp/",
   "projectname": "taro-project",
-  "description": "taro项目",
+  "description": "taro项目，这是微信小程序项目配置的默认文件project.config.json，百度小程序project.swan.json，抖音小程序project.tt.json，QQ小程序project.qq.json，支付宝小程序project.alipay.json，飞书小程序project.lark.json process.env.TARO_ENV = weapp / swan / alipay / tt / qq / jd / h5 / rn",
   "appid": "wxf94697821b77cf56",
   "setting": {
     "urlCheck": true,
@@ -14,11 +14,14 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "minifyWXML": false,
+    "minifyWXSS": false,
+    "condition": true
   },
   "compileType": "miniprogram",
   "libVersion": "3.2.4",
-  "srcMiniprogramRoot": "dist/",
+  "srcMiniprogramRoot": "dist/weapp/",
   "packOptions": {
     "ignore": [],
     "include": []
@@ -27,5 +30,9 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
+  },
+  "projectArchitecture": "multiPlatform",
+  "simulatorPluginLibVersion": {
+    "wxext14566970e7e9f62": "2.27.3-8"
   }
 }

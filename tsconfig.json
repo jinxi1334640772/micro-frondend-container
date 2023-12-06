@@ -21,8 +21,9 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "types": ["@tarojs/components/vue3"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
     }
   },
   "include": ["./src", "./types", "./config"],
