@@ -56,7 +56,8 @@
     "axios": "^1.6.2",
     "pinia": "^2.1.7",
     "vue": "^3.0.0",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "wx-server-sdk": "^2.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

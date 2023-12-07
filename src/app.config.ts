@@ -13,6 +13,12 @@ export default defineAppConfig({
     'pages/index/index',
     'pages/jinxi/index',
     'pages/routeOne/index',
+    'pages/baseContent/index',
+    'pages/viewContainer/index',
+    'pages/form/index',
+    'pages/navigator/index',
+    'pages/media/index',
+    'pages/open/index',
   ],
   // 独立分包是小程序中一种特殊类型的分包，可以独立于主包和其他分包运行。从独立分包中页面进入小程序时，不需要下载主包。当用户进入普通分包或主包内页面时，主包才会被下载。
   // 独立分包中不能依赖主包和其他分包中的内容，包括 js 文件、template、wxss、自定义组件、插件等（使用 分包异步化 时 js 文件、自定义组件、插件不受此条限制）；主包中的 app.wxss 对独立分包无效，应避免在独立分包页面中使用 app.wxss 中的样式；App 只能在主包内定义，独立分包中不能定义 App，会造成无法预期的行为；独立分包中暂时不支持使用插件。

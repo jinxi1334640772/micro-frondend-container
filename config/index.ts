@@ -23,6 +23,9 @@ export default defineConfig(async (merge, { command, mode }) => {
     },
     presets:[],// 一个 preset 是一系列 Taro 插件的集合，配置语法同 plugins。
     plugins: [
+      ['@tarojs/plugin-platform-weapp', {
+        enablekeyboardAccessory: true
+      }],
       // [
       //   '@tarojs/plugin-mock',
       //   {

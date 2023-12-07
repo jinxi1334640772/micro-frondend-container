@@ -3,7 +3,7 @@
   "name": "张进喜开发专属",
   "version": "0.0.1",
   "mini-android": {
-    "sdkVersion": "1.0.21",
+    "sdkVersion": "1.1.7",
     "toolkitVersion": "0.10.0",
     "useExtendedSdk": {
       "media": false,
@@ -29,7 +29,7 @@
     }
   },
   "mini-ios": {
-    "sdkVersion": "1.1.4",
+    "sdkVersion": "1.2.5",
     "toolkitVersion": "0.0.9",
     "useExtendedSdk": {
       "WeAppOpenFuns": true,
