@@ -10,11 +10,7 @@
           :scrollWithAnimation="true"
           :scrollAnimationDuration="3000"
           @tap="play">
-          <cover-image
-            fixedTop="0"
-            fixedLeft="20"
-            src="@/assets/img/1.jpg"
-            @tap="onImageTap" />
+          <cover-image fixedTop="0" fixedLeft="20" src="@/assets/img/1.jpg" @tap="onImageTap" />
         </cover-view>
       </view>
     </view>
@@ -71,7 +67,12 @@
     </view>
     <view class="item">
       <view class="title" @tap="pageShowToggle"> PageContainer组件：点击弹出显示 </view>
-      <page-container :show="pageShow" :duration="1000" :z-index="10" :overlay="true" position="center" :round="true" :closeOnSlideDown="false" @clickOverlay="clickOverlay">
+      <view class="share" v-for="(item, index) in contacts" :key="item.id" @tap="e => tabShare(e, index)">
+        <share-element :duration="3000" :transform="currentIndex === index" mapkey="transform" style="background-color: red;"> 这是share-element</share-element>
+        <view>{{ item.email }}</view>
+      </view>
+      <page-container :show="pageShow" :duration="3000" :z-index="10" :overlay="true" position="center" :round="true" :closeOnSlideDown="false" @clickOverlay="clickOverlay">
+        <share-element :duration="3000" transform mapkey="transform"  style="background-color: red;"> 这是share-element </share-element>
         小程序如果在页面内进行复杂的界面设计（如在页面内弹出半屏的弹窗、在页面内加载一个全屏的子页面等），
         用户进行返回操作会直接离开当前页面，不符合用户预期，预期应为关闭当前弹出的组件。
         为此提供“假页”容器组件，效果类似于popup弹出层，页面内存在该容器时，当用户进行返回操作，关闭该容器不关闭页面。
@@ -88,9 +89,14 @@ import { getName } from "@/api/api";
 import Taro, { useReady } from "@tarojs/taro";
 export default {
   setup() {
+    const contacts = [
+      { id: 1, name: "Frank", img: "frank.png", phone: "0101 123456", mobile: "0770 123456", email: "frank@emailionicsorter.com" },
+      { id: 2, name: "Susan", img: "susan.png", phone: "0101 123456", mobile: "0770 123456", email: "frank@emailionicsorter.com" },
+    ];
     const html = ref(`<h3 id="htmlId" style="color: red">这是通过vue的v-html渲染的节点</h3>`);
     let list = reactive({});
     let pageShow = ref(null);
+    let currentIndex = ref(0);
     const play = function (e) {
       console.log("play", e);
     };
@@ -101,14 +107,21 @@ export default {
       console.log("moveViewChange", e);
     };
     const pageShowToggle = function (e) {
-      console.log("pageShowToggle", e);
-      pageShow.value = true;
+      pageShow.value = false;
+      setTimeout(()=>{
+        pageShow.value = true;
+      },3000)
     };
     const clickOverlay = function (e) {
       console.log("clickOverlay", e);
     };
     const handleTap = function (e) {
       console.log("handleTap swiper item", e);
+    };
+    const tabShare = (e, index) => {
+      currentIndex.value = index
+      pageShowToggle()
+      console.log(e, index);
     };
     useReady(() => {
       Taro.nextTick(() => {
@@ -124,9 +137,12 @@ export default {
       html,
       pageShow,
       list,
+      currentIndex,
+      contacts,
       moveViewChange,
       pageShowToggle,
       clickOverlay,
+      tabShare,
       handleTap,
     };
   },

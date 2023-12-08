@@ -4,15 +4,41 @@ export default defineAppConfig({
   permission:{
     'scope.userLocation':{
       desc:'你的位置信息将用于小程序位置接口的效果展示'
-    }
+    },
+    // 'scope.userInfo':{
+    //   desc:'userInfo'
+    // },
+    // 'scope.address':{
+    //   desc:'address'
+    // },
+    // 'scope.invoiceTitle':{
+    //   desc:'invoiceTitle'
+    // },
+    // 'scope.invoice':{
+    //   desc:'invoice'
+    // },
+    // 'scope.werun':{
+    //   desc:'werun'
+    // },
+    // 'scope.record':{
+    //   desc:'record'
+    // },
+    // 'scope.writePhotosAlbum':{
+    //   desc:'writePhotosAlbum'
+    // },
+    // 'scope.camera':{
+    //   desc:'camera'
+    // },
+    // 'scope.bluetoothBackground':{
+    //   desc:'bluetoothBackground'
+    // },
   },
   requiredBackgroundModes:['audio','location'],
-  entryPagePath:'pages/index/index', // 默认首页，不填默认pages中第一个
+  entryPagePath:'pages/zhangjinxi/index', // 默认首页，不填默认pages中第一个
   pages: [
     'pages/zhangjinxi/index', // 下面已经设置entryPagePath pages/index/index为首页
     'pages/index/index',
     'pages/jinxi/index',
-    'pages/routeOne/index',
     'pages/baseContent/index',
     'pages/viewContainer/index',
     'pages/form/index',
@@ -58,9 +84,9 @@ export default defineAppConfig({
     position:'bottom',
     custom:false,
     list:[
-      {pagePath:'pages/index/index',text:'首页',iconPath:'./assets/img/图片 (10).jpg',selectedIconPath:'./assets/img/图片 (11).jpg'},
-      {pagePath:'pages/zhangjinxi/index',text:'zhangjinxi',iconPath:'./assets/img/图片 (2).jpg',selectedIconPath:'./assets/img/图片 (3).jpeg'},
-      {pagePath:'pages/jinxi/index',text:'jinxizhang',iconPath:'./assets/img/图片 (4).jpg',selectedIconPath:'./assets/img/图片 (8).jpg'},
+      {pagePath:'pages/zhangjinxi/index',text:'项目简介',iconPath:'./assets/img/图片 (2).jpg',selectedIconPath:'./assets/img/图片 (3).jpeg'},
+      {pagePath:'pages/index/index',text:'组件学习',iconPath:'./assets/img/图片 (10).jpg',selectedIconPath:'./assets/img/图片 (11).jpg'},
+      {pagePath:'pages/jinxi/index',text:'我的',iconPath:'./assets/img/图片 (4).jpg',selectedIconPath:'./assets/img/图片 (8).jpg'},
     ]
   }
 })

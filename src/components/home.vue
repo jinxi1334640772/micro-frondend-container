@@ -1,5 +1,5 @@
 <template>
-  <view>这是Home页面</view>
+  <view style="background-color: bisque;width: 100%;height: 100%;">这是Home页面</view>
 </template>
 <script>
 import Taro from '@tarojs/taro'

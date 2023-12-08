@@ -1,5 +1,5 @@
 <template>
-  <view>这是tabOne页面</view>
+  <view style="background-color: yellow;width: 100%;height: 100%;">这是tabOne页面</view>
 </template>
 <script>
 import Taro from '@tarojs/taro'

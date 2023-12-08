@@ -1,20 +1,21 @@
 <template>
-  <scroll-view style="height: 100%;" class="scroll" :scroll-y="true" @scrolltoupper="upper" @scrolltolower="lower" @scroll="scroll" :scroll-into-view="toView" :scroll-top="scrollTop">
-    <view class="navigate">运用技术:taro 3.6 + taroUI + vue3 + TS + babel</view>
-    <view class="navigate">使用Eslint进行代码风格检查</view>
-    <view class="navigate">使用axios工具，请求远程跨域数据</view>
-    <view class="navigate">使用pinia，全局状态管理</view>
-    <view class="navigate">使用vue-router路由管理</view>
-    <view class="navigate">使用@tarojs/plugin-html支持HTML元素开发</view>
-    <view class="navigate">基于@tarojs/cli内置webpack5打包构建</view>
-    <view style="height: 2rpx;background-color: black;margin:20rpx"></view>
-    <button style="width:100%" type="primary" :plain="true" hoverStyle="color:blue">点击下面按钮跳转&查看相应组件使用</button>
-    <button style="width:100%" type="primary" hoverStyle="color:blue" @tap="goto('baseContent')">点击查看基础内容组件</button>
-    <button style="width:100%" type="primary" hoverStyle="background-color:blue" :plain="true" @tap="goto('viewContainer')">点击查看容器组件</button>
-    <button style="width:100%" type="warn" @tap="goto('form')">点击查看表单组件</button>
-    <button style="width:100%" type="primary" :loading="true" @tap="goto('navigator')">点击查看导航组件</button>
-    <button style="width:100%" type="default" @tap="goto('media')">点击查看媒体组件</button>
-    <button style="width:100%" type="primary" size="mini" @tap="goto('open')">点击查看开放能力</button>
+  <scroll-view
+    style="height: 100%"
+    class="scroll"
+    :scroll-y="true"
+    @scrolltoupper="upper"
+    @scrolltolower="lower"
+    @scroll="scroll"
+    :scroll-into-view="toView"
+    :scroll-top="scrollTop">
+    <button class="button" type="primary" :plain="true" hoverStyle="color:blue">点击下面按钮跳转&查看相应组件使用</button>
+    <view style="height: 2rpx; background-color: black; margin: 20rpx"></view>
+    <button class="button" type="primary" hoverStyle="color:blue" @tap="goto('baseContent')">点击查看基础内容组件</button>
+    <button class="button" type="primary" hoverStyle="background-color:blue" :plain="true" @tap="goto('viewContainer')">点击查看容器组件</button>
+    <button class="button" type="warn" @tap="goto('form')">点击查看表单组件</button>
+    <button class="button" type="primary" :loading="true" @tap="goto('navigator')">点击查看导航组件</button>
+    <button class="button" type="default" @tap="goto('media')">点击查看媒体组件</button>
+    <button class="button" type="primary" size="default" @tap="goto('open')">点击查看开放能力</button>
   </scroll-view>
 </template>
 
@@ -56,11 +57,15 @@ export default {
   created() {
     // 建议在页面初始化时把 getCurrentInstance() 的结果保存下来供后面使用，而不是频繁地调用此 API
     this.$instance = Taro.getCurrentInstance();
+    // 打开调试
+    // Taro.setEnableDebug({
+    //   enableDebug: true,
+    // });
   },
   // 在 Vue2 和 Vue3 中，Taro 额外添加的生命周期方法的写法一致,页面组件除了支持 Vue 的生命周期方法外，还根据小程序的标准，额外支持以下生命周期：
   // onLoad 在小程序环境中对应页面的 onLoad。页面创建时执行。在此生命周期中通过访问 options 参数
   onLoad(options) {
-    let instance = Taro.getCurrentInstance; // 小程序实例对象
+    let instance = Taro.getCurrentInstance; // 当前页面实例对象
     let router = instance.router; // 拿到router对象
   },
   // 一般情况下建议使用 Vue 的 onUnmounted 生命周期处理页面卸载时的逻辑。当某些特殊情况需要在页面的 onUnload的同一个事件循环中实现逻辑时才使用它（如对小程序的生命周期执行顺序有强依赖关系时）

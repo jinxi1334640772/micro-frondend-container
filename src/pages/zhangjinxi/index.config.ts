@@ -1,4 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '张进喜second页面',
+  navigationBarTitleText: '项目简介页面',
   // usingComponents: {},
 })

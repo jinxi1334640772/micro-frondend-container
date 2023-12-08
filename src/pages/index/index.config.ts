@@ -6,7 +6,7 @@
  */
 export default definePageConfig({
   navigationBarBackgroundColor:'#fff',
-  navigationBarTitleText: '这是首页',
+  navigationBarTitleText: 'taro组件学习',
   navigationBarTextStyle:'black',
   // navigationStyle:'custom',
   // transparentTitle:'auto', // 先设置navigationStyle:'custom',导航栏透明设置。支持 always 一直透明 / auto 滑动/// 自适应 / none 不透明

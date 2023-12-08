@@ -8,15 +8,15 @@
     "es6": false,
     "enhance": false,
     "compileHotReLoad": false,
-    "postcss": false,
-    "minified": false,
+    "postcss": true,
+    "minified": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "minifyWXML": false,
-    "minifyWXSS": false,
+    "minifyWXML": true,
+    "minifyWXSS": true,
     "condition": true
   },
   "compileType": "miniprogram",

@@ -7,12 +7,10 @@ import { createRouter,createWebHistory } from 'vue-router'
 // 自定义组件
 import Home from './components/home.vue'
 import Tab1 from './components/tabOne.vue'
-import Tab2 from './components/tabTwo.vue'
 // import './utils/wx.ts'
 const routes = [
   { path: '/', component: Home },
   { path: '/tab1', component: Tab1 },
-  { name:'TabTwo',path: '/tab2/:groupId/:id', component: Tab2 },
 ]
 const router = createRouter({
   history: createWebHistory(),
