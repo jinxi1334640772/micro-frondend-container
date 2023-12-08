@@ -1,9 +1,15 @@
 export default defineAppConfig({
-  networkTimeout:{request:5000,connectSocket:5000,uploadFile:5000,downloadFile:5000},
-  debug:true,
-  permission:{
-    'scope.userLocation':{
-      desc:'你的位置信息将用于小程序位置接口的效果展示'
+  networkTimeout: { request: 5000, connectSocket: 5000, uploadFile: 5000, downloadFile: 5000 },
+  debug: true,
+  "requiredPrivateInfos": [ // taro文档没介绍，微信文档需要，获取敏感信息，例如：打开地址
+    "getLocation",
+    "onLocationChange",
+    "startLocationUpdateBackground",
+    "chooseAddress"
+  ],
+  permission: {
+    'scope.userLocation': {
+      desc: '你的位置信息将用于小程序位置接口的效果展示'
     },
     // 'scope.userInfo':{
     //   desc:'userInfo'
@@ -33,8 +39,8 @@ export default defineAppConfig({
     //   desc:'bluetoothBackground'
     // },
   },
-  requiredBackgroundModes:['audio','location'],
-  entryPagePath:'pages/zhangjinxi/index', // 默认首页，不填默认pages中第一个
+  requiredBackgroundModes: ['audio', 'location'],
+  entryPagePath: 'pages/zhangjinxi/index', // 默认首页，不填默认pages中第一个
   pages: [
     'pages/zhangjinxi/index', // 下面已经设置entryPagePath pages/index/index为首页
     'pages/index/index',
@@ -67,26 +73,26 @@ export default defineAppConfig({
     navigationBarBackgroundColor: '#fff',
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black',
-    navigationStyle:'default',
-    backgroundColor:'#232323',
+    navigationStyle: 'default',
+    backgroundColor: '#232323',
     backgroundTextStyle: 'light',
-    backgroundColorTop:'blue', // ios
-    backgroundColorBottom:'yellow', // ios
-    enablePullDownRefresh:true, // 是否开启当前页的下拉刷新
-    onReachBottomDistance:50, // 页面上拉触底触发事件时距离页面底部的距离
-    pageOrientation:'auto' // 屏幕旋转设置
+    backgroundColorTop: 'blue', // ios
+    backgroundColorBottom: 'yellow', // ios
+    enablePullDownRefresh: true, // 是否开启当前页的下拉刷新
+    onReachBottomDistance: 50, // 页面上拉触底触发事件时距离页面底部的距离
+    pageOrientation: 'auto' // 屏幕旋转设置
   },
-  tabBar:{
-    color:'red',
-    selectedColor:'blue',
-    backgroundColor:'white',
-    borderStyle:'black',
-    position:'bottom',
-    custom:false,
-    list:[
-      {pagePath:'pages/zhangjinxi/index',text:'项目简介',iconPath:'./assets/img/图片 (2).jpg',selectedIconPath:'./assets/img/图片 (3).jpeg'},
-      {pagePath:'pages/index/index',text:'组件学习',iconPath:'./assets/img/图片 (10).jpg',selectedIconPath:'./assets/img/图片 (11).jpg'},
-      {pagePath:'pages/jinxi/index',text:'我的',iconPath:'./assets/img/图片 (4).jpg',selectedIconPath:'./assets/img/图片 (8).jpg'},
+  tabBar: {
+    color: 'red',
+    selectedColor: 'blue',
+    backgroundColor: 'white',
+    borderStyle: 'black',
+    position: 'bottom',
+    custom: false,
+    list: [
+      { pagePath: 'pages/zhangjinxi/index', text: '项目简介', iconPath: './assets/img/图片 (2).jpg', selectedIconPath: './assets/img/图片 (3).jpeg' },
+      { pagePath: 'pages/index/index', text: '组件学习', iconPath: './assets/img/图片 (10).jpg', selectedIconPath: './assets/img/图片 (11).jpg' },
+      { pagePath: 'pages/jinxi/index', text: '我的', iconPath: './assets/img/图片 (4).jpg', selectedIconPath: './assets/img/图片 (8).jpg' },
     ]
   }
 })
