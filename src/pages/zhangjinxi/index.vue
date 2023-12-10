@@ -8,11 +8,11 @@
       <view class="navigate">使用vue-router路由管理</view>
       <view class="navigate">使用@tarojs/plugin-html支持HTML元素开发</view>
       <view class="navigate">基于@tarojs/cli内置webpack5打包构建</view>
+      <view class="navigate">NutUI 京东风格的轻量级移动端组件库</view>
     </list-view>
     <nut-button>这是@nutui/nutui-taro 4.2.3版本的nut-button组件</nut-button>
-    <nut-cell title="我是标题" sub-title="副标题描述" desc="描述文字"></nut-cell>
-    <nut-button type="primary" @click="show = true">显示遮罩层</nut-button>
-    <nut-overlay v-model:visible="show"></nut-overlay>
+    <nut-cell title="展示弹出层" sub-title="副标题描述" desc="描述文字" is-link @click="show = true"></nut-cell>
+    <nut-popup :style="{ padding: '30px 50px' }" v-model:visible="show">正文</nut-popup>
     <grid-view type="aligned" :main-axis-gap="1" :cross-axis-count="2" :cross-axis-gap="1" :max-cross-axis-extent="0">
       <button type="primary" :plain="true">Pinia数据：{{ counter.count }}</button>
       <button type="warn" size="default" @tap="onAdd">点击++</button>

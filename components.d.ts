@@ -11,6 +11,7 @@ declare module 'vue' {
     NutButton: typeof import('@nutui/nutui-taro')['Button']
     NutCell: typeof import('@nutui/nutui-taro')['Cell']
     NutOverlay: typeof import('@nutui/nutui-taro')['Overlay']
+    NutPopup: typeof import('@nutui/nutui-taro')['Popup']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabOne: typeof import('./src/components/tabOne.vue')['default']
