@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/weapp/",
   "projectname": "taro-project",
-  "description": "taro项目，这是微信小程序项目配置的默认文件project.config.json，百度小程序project.swan.json，抖音小程序project.tt.json，QQ小程序project.qq.json，支付宝小程序project.alipay.json，飞书小程序project.lark.json process.env.TARO_ENV = weapp / swan / alipay / tt / qq / jd / h5 / rn 多端应用Secret:5331914bafdf81b6c77d8d28f0e5391e  id： wxecfa1d254685dea0   小程序：appId:wxf94697821b77cf56   AppSecret：1f8d788064ac0a4898b0e955ff2edcfd 启动模拟器： emulator @Pixel_4_API_30  github_accessToken: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",
+  "description": "taro项目，这是微信小程序项目配置的默认文件project.config.json，百度小程序project.swan.json，抖音小程序project.tt.json，QQ小程序project.qq.json，支付宝小程序project.alipay.json，飞书小程序project.lark.json process.env.TARO_ENV = weapp / swan / alipay / tt / qq / jd / h5 / rn 多端应用Secret:5331914bafdf81b6c77d8d28f0e5391e  id： wxecfa1d254685dea0   小程序：appId:wxf94697821b77cf56   AppSecret：1f8d788064ac0a4898b0e955ff2edcfd 启动模拟器： emulator @Pixel_4_API_30  github_accessToken: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 classickToken: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",
   "appid": "wxf94697821b77cf56",
   "setting": {
     "urlCheck": true,
